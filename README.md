@@ -8,9 +8,9 @@ pip install -r requirements.txt
 
 ## 📝 Config file info
 - botConfig:
-  - botToken -> Discord Bot Token
-  - botStatus -> Discord Bot Status 
-  - botAccess -> Discord User's ID's who can use Bot commands
+  - `botToken` -> Discord Bot Token
+  - `botStatus` -> Discord Bot Status 
+  - `botAccess` -> Discord User's ID's who can use Bot commands
 - dmallConfig:
   - onReady -> true / false:
     - If `onReady` is true, The Bot will dmall ALL severs after main.py file is started.
