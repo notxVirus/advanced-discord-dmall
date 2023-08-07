@@ -34,3 +34,8 @@ Use the following message parameters to customize your DMall messages:
 2. `{member.name}` -> Returns the member's name.
 3. `{guild}` -> Returns the guild name from which the message was sent.
 4. `{guild.id}` -> Returns the guild ID from which the message was sent.
+
+## 🤖 Bot commands:
+1. `!message` - Sends dmall message in author's DMs.
+2. `!pfp < newBotPfp >` - Changes bot avatar.
+3. `!rename < newBotName >` - Changes bot name. 
