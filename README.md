@@ -13,19 +13,19 @@ pip install -r requirements.txt
   - botAccess -> Discord User's ID's who can use Bot commands
 - dmallConfig:
   - onReady -> true / false:
-    - If onReady is true, The Bot will dmall ALL severs after main.py file is started.
+    - If `onReady` is true, The Bot will dmall ALL severs after main.py file is started.
   - onGuildJoin -> true / false:
-    - If onGuildJoin in true, The Bot will DM the guild it has been added to.
+    - If `onGuildJoin` in true, The Bot will DM the guild it has been added to.
   - onMemberJoin -> true / false:
-    - If onMemberJoin is true, The Bot will send a DM to new server members.
+    - If `onMemberJoin` is true, The Bot will send a DM to new server members.
   - onlineOnly -> true / false:
-    - If onlineOnly is true, The Bot will send DMs only to users who are online, idle, or in "Do Not Disturb" status.
+    - If `onlineOnly` is true, The Bot will send DMs only to users who are online, idle, or in "Do Not Disturb" status.
   - embed -> true / false:
-    - If embed is true, The Bot will send messages as embedded content.
+    - If `embed` is true, The Bot will send messages as embedded content.
   - content -> true / false:
-    - If content is true, The Bot will send plain text messages.
+    - If `content` is true, The Bot will send plain text messages.
   - button -> true / false:
-    - If button in true, The Bot will add a button to the DM message.
+    - If `button` in true, The Bot will add a button to the DM message.
 
 ## ⭐ Dmall Message Parameters
 Use the following message parameters to customize your DMall messages:
