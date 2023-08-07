@@ -15,7 +15,7 @@ pip install -r requirements.txt
   - onReady -> true / false:
     - If `onReady` is true, The Bot will dmall ALL severs after main.py file is started.
   - onGuildJoin -> true / false:
-    - If `onGuildJoin` in true, The Bot will DM the guild it has been added to.
+    - If `onGuildJoin` is true, The Bot will DM the guild it has been added to.
   - onMemberJoin -> true / false:
     - If `onMemberJoin` is true, The Bot will send a DM to new server members.
   - onlineOnly -> true / false:
