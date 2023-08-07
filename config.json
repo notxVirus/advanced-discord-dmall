@@ -1,0 +1,32 @@
+{
+    "botConfig": {
+        "botToken": "DISCORD-BOT-TOKEN",
+        "botStatus": "BOT-STATUS-TEXT",
+        "botAccess": [1, 2, 3, 4, 5]
+    },
+    "dmallConfig": {
+        "onReady": true,
+        "onGuildJoin": true,
+        "onMemberJoin": true,
+        "onlineOnly": true,
+        "embed": true,
+        "embedConfig": {
+            "emdedTitle": "EMBED-TITLE",
+            "embedDescription": "[EMBED-DESCRIPTION](https://discord.com)",
+            "embedFooterText": "FOOTER-TEXT",
+            "embedFooterIconURL": "FOOTER-ICON-URL",
+            "embedImageURL": "EMBED-IMAGE-URL",
+            "embedThumbnailURL": "EMBED-THUBNAIL-URL"
+        },
+        "content": true,
+        "contentConfig": {
+            "contentText": "YOUR-TEXT-HERE"
+        },
+        "button": true,
+        "buttonConfig": {
+            "buttonLabel": "BUTTON-NAME",
+            "buttonURL": "https://discord.com",
+            "buttonEmoji": "BUTTON-EMOJI"
+        }
+    }
+}
