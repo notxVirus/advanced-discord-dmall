@@ -494,6 +494,7 @@ async def pfp(ctx, url = None):
         await ctx.send(f"Sorry, but you can't use this command.", delete_after = 5)
 
 try:
+    configureBot(botToken)
     client.run(botToken)
 except Exception as e:
     console.error(f"Failed to log in with {Fore.MAGENTA}{botToken[:26]}{Fore.RESET}{Fore.LIGHTBLACK_EX} token...")
