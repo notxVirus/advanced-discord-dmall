@@ -245,81 +245,42 @@ async def on_member_join(member):
                 view = View()
                 view.add_item(button)
 
-            if onlineOnly is True:
-                if member.status != discord.Status.offline:
-                    if contentEnabled and embedEnabled and buttonEnabled is True:
-                        try:
-                            await member.send(content = contentText.format(member = member, guild = guild), embed = embed, view = view)
-                            console.success(f"Sent message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX})")
-                        except Exception as e:
-                            console.error(f"Failed to send message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX}) {e}")
-                    elif embedEnabled and buttonEnabled is True:
-                        try:
-                            await member.send(embed = embed, view = view)
-                            console.success(f"Sent message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX})")
-                        except Exception as e:
-                            console.error(f"Failed to send message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX}) {e}")
-                    elif contentEnabled and buttonEnabled is True:
-                        try:
-                            await member.send(content = contentText.format(member = member, guild = guild), view = view)
-                            console.success(f"Sent message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX})")
-                        except Exception as e:
-                            console.error(f"Failed to send message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX}) {e}")
-                    elif contentEnabled and embedEnabled is True:
-                        try:
-                            await member.send(content = contentText.format(member = member, guild = guild), embed = embed)
-                            console.success(f"Sent message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX})")
-                        except Exception as e:
-                            console.error(f"Failed to send message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX}) {e}")
-                    elif contentEnabled is True:
-                        try:
-                            await member.send(content = contentText.format(member = member, guild = guild))
-                            console.success(f"Sent message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX})")
-                        except Exception as e:
-                            console.error(f"Failed to send message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX}) {e}")
-                    elif embedEnabled is True:
-                        try:
-                            await member.send(embed = embed)
-                            console.success(f"Sent message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX})")
-                        except Exception as e:
-                            console.error(f"Failed to send message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX}) {e}")
-            else:
-                if contentEnabled and embedEnabled and buttonEnabled is True:
-                    try:
-                        await member.send(content = contentText.format(member = member, guild = guild), embed = embed, view = view)
-                        console.success(f"Sent message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX})")
-                    except Exception as e:
-                        console.error(f"Failed to send message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX}) {e}")
-                elif embedEnabled and buttonEnabled is True:
-                    try:
-                        await member.send(embed = embed, view = view)
-                        console.success(f"Sent message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX})")
-                    except Exception as e:
-                        console.error(f"Failed to send message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX}) {e}")
-                elif contentEnabled and buttonEnabled is True:
-                    try:
-                        await member.send(content = contentText.format(member = member, guild = guild), view = view)
-                        console.success(f"Sent message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX})")
-                    except Exception as e:
-                        console.error(f"Failed to send message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX}) {e}")
-                elif contentEnabled and embedEnabled is True:
-                    try:
-                        await member.send(content = contentText.format(member = member, guild = guild), embed = embed)
-                        console.success(f"Sent message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX})")
-                    except Exception as e:
-                        console.error(f"Failed to send message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX}) {e}")
-                elif contentEnabled is True:
-                    try:
-                        await member.send(content = contentText.format(member = member, guild = guild))
-                        console.success(f"Sent message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX})")
-                    except Exception as e:
-                        console.error(f"Failed to send message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX}) {e}")
-                elif embedEnabled is True:
-                    try:
-                        await member.send(embed = embed)
-                        console.success(f"Sent message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX})")
-                    except Exception as e:
-                        console.error(f"Failed to send message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX}) {e}")
+            if contentEnabled and embedEnabled and buttonEnabled is True:
+                try:
+                    await member.send(content = contentText.format(member = member, guild = guild), embed = embed, view = view)
+                    console.success(f"Sent message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX})")
+                except Exception as e:
+                    console.error(f"Failed to send message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX}) {e}")
+            elif embedEnabled and buttonEnabled is True:
+                try:
+                    await member.send(embed = embed, view = view)
+                    console.success(f"Sent message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX})")
+                except Exception as e:
+                    console.error(f"Failed to send message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX}) {e}")
+            elif contentEnabled and buttonEnabled is True:
+                try:
+                    await member.send(content = contentText.format(member = member, guild = guild), view = view)
+                    console.success(f"Sent message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX})")
+                except Exception as e:
+                    console.error(f"Failed to send message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX}) {e}")
+            elif contentEnabled and embedEnabled is True:
+                try:
+                    await member.send(content = contentText.format(member = member, guild = guild), embed = embed)
+                    console.success(f"Sent message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX})")
+                except Exception as e:
+                    console.error(f"Failed to send message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX}) {e}")
+            elif contentEnabled is True:
+                try:
+                    await member.send(content = contentText.format(member = member, guild = guild))
+                    console.success(f"Sent message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX})")
+                except Exception as e:
+                    console.error(f"Failed to send message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX}) {e}")
+            elif embedEnabled is True:
+                try:
+                    await member.send(embed = embed)
+                    console.success(f"Sent message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX})")
+                except Exception as e:
+                    console.error(f"Failed to send message to: {Fore.MAGENTA}{member}{Fore.LIGHTBLACK_EX} ({Fore.MAGENTA}{member.id}{Fore.LIGHTBLACK_EX}) {e}")
 
 
 
