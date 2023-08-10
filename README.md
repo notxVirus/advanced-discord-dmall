@@ -25,7 +25,7 @@ pip install -r requirements.txt
   - content -> true / false:
     - If `content` is true, The Bot will send plain text messages.
   - button -> true / false:
-    - If `button` in true, The Bot will add a button to the DM message.
+    - If `button` is true, The Bot will add a button to the DM message.
 
 ## ⭐ Dmall Message Parameters
 Use the following message parameters to customize your DMall messages:
