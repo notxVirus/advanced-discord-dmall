@@ -76,7 +76,6 @@ def configureBot(botToken):
         if intents['flags'] != config['flags']:
             console.info(f"{Fore.LIGHTBLACK_EX}Turned on Bot Intents: {intents['flags']} {Fore.MAGENTA}->{Fore.RESET} {Fore.LIGHTBLACK_EX}{config['flags']}{Fore.RESET}")
             return console.info(f"Please, run script again.")
-        console.info(f"Please, run script again.")
     else:
         console.error("Invalid token provided.")
 
